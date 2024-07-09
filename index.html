@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahana Sudhakara Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Sahana</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills-content">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills-content" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    
+    <div class="profile-hero">
+      <section id="profile">
+          <div class="section__pic-container">
+              <img src="./assets/profile-pic.png" alt="Sahana Sudhakara profile picture" class="profile-pic"/>
+          </div>
+          <div class="section__text">
+              <p class="section__text__p1">Hello, I'm</p>
+              <h1 class="title_typing">Sahana</h1>
+              <p class="section__text__p2">Software Engineer</p>
+              <div class="btn-container">
+                  <button class="btn btn-color-2" onclick="window.open('./assets/Sahana_Sudhakara_Resume.pdf')">Download CV</button>
+                  <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+              </div>
+              <div id="socials-container">
+                  <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/sahana-sudhakara/'"/>
+                  <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/SahanaSudhakara'"/>
+              </div>
+          </div>
+          <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#about'"/>
+      </section>
+  </div>
+  
+  <div class="about-hero">
+
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container-info">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+                        <h3>Experience</h3>
+                        <p>4+ years <br />Software Development</p>
+                    </div>
+                    <div class="details-container-info">
+                        <img src="./assets/education.png" alt="Education icon" class="icon"/>
+                        <h3>Education</h3>
+                        <p>MS in Computer Science<br />Santa Clara University</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                      I'm a passionate Software developer, building powerful web and mobile apps, and dynamic backend systems. Currently advancing my skills with a Master's in Computer Science at Santa Clara University, my portfolio spans academia and industry, showcasing proficiency across various languages and frameworks. In my free time, I enjoy painting, travel, and embroidery, which enrich my creative journey with diverse interests. Fun fact: I'm a coffee enthusiast and always on the lookout for the perfect brew!                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#skills-content'"/>
+    </section>
+</div>
+<div class="skills-hero">
+
+    <section id="skills-content">
+      <p class="section__text__p1">Discover More About Me</p>
+      <h1 class="title">My Skills</h1>      
+      <div id="skills-container">
+        <!-- The script should not be within a container -->
+        <script>
+          function loadSkill() {
+            fetch("skills.html")
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById("skills-container").innerHTML = data;
+              })
+              .catch(error => console.error('Error loading skills.html:', error));
+          }
+    
+          // Call the function to load skills.html content
+          loadSkill();
+        </script>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'"/>
+    </section>
+    </div>
+    <div class="experience-hero">
+
+
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div id="experience-container">
+          <!-- The script should not be within a container -->
+          <script>
+            function loadExperience() {
+              fetch("experience.html")
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById("experience-container").innerHTML = data;
+                })
+                .catch(error => console.error('Error loading experience.html:', error));
+            }
+      
+            // Call the function to load experience.html content
+            loadExperience();
+          </script>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'"/>
+    </section>
+    </div>
+
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+              <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/project-1.png" alt="Project 1" class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">GDSC Solution Challenge 2024 - Safe Spot App</h2>
+                <div class="btn-container-1">
+                    <img src="./assets/github.png" alt="GitHub profile" class="icon" onclick="location.href='https://github.com/SahanaSudhakara/gdsc-frontend'"/>
+                </div>
+            </div>
+            
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/project-2.png" alt="Project 2" class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">Inrix Hackathon 2023</h2>
+                <div class="btn-container-1">
+                    <img src="./assets/github.png" alt="GitHub profile" class="icon" onclick="location.href='https://github.com/SahanaSudhakara/inrix-2'"/>
+                </div>
+            </div>
+            
+            <div class="details-container color-container">
+                <div class="article-container-1">
+                    <img src="./assets/project-3.png" alt="Project 3" class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">Bay Area Event Notification System: Utilizing Pub/Sub Model</h2>
+                <div class="btn-container-1">
+                    <img src="./assets/github.png" alt="GitHub profile" class="icon" onclick="location.href='https://github.com/SahanaSudhakara/EventBasedPubSub'"/>
+                </div>
+            </div>
+          </div>
+          <p>Checkout my <a href="https://github.com/SahanaSudhakara/Machine-learning-Algorithms" target="_blank" rel="noopener noreferrer">MACHINE LEARNING REPOSITORY</a> for a range of regression, classification,
+            and clustering solutions.</p>         
+
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'"/>
+    </section>
+    <div class="contact-hero">
+
+    <section id="contact">
+      <p class="section__text__p1">Thank you</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-left">
+          <div class="contact-left-title">
+              <h2>Get in Touch</h2>
+              <hr>
+          </div>
+          <form action="https://api.web3forms.com/submit" method="POST">
+              <div class="contact-left-inputs">
+                <input type="hidden" name="access_key" value="96b669a8-fac5-483a-b743-2ce81959f2d0">
+                  <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                  <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                  <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-color-1">
+                  Submit
+              </button>
+              <input type="hidden" name="accessKey" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          </form>
+      </div>
+    </section>
+</div>
+    <footer>
+        <p>&copy; 2024 Sahana Sudhakara. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
