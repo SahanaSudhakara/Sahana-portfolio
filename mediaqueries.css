@@ -107,13 +107,7 @@
 }
   
 @media screen and (max-width: 600px) {
-  .profile-hero,
-  .about-hero,
-  .skills-hero,
-  .experience-hero,
-  .contact-hero {
-    background-image: none;
-  }
+
   
   footer {
     height: 40vh;
