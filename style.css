@@ -15,11 +15,12 @@ html {
 }
 .profile-hero
 {
-  position: relative;
+position: relative;
 background-image: url(assets/page1.png);
 }
 .about-hero
 {
+  margin-top: 5rem;
   position: relative;
 
 background-image: url(assets/page2.png);

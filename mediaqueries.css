@@ -6,6 +6,8 @@
 
   .about-containers {
     flex-wrap: wrap;
+    margin-top: 0;
+
   }
   #about,
   #experience,
@@ -13,6 +15,17 @@
   #contact,
   #projects {
     height: fit-content;
+
+  }
+  .profile-hero,
+  .profile-hero,
+  .about-hero,
+  .skills-hero,
+  .experience-hero,
+  .contact-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -88,11 +101,20 @@
     flex: 1 1 calc(100% - 2rem); /* Ensure textarea takes full width minus the gap */
     height: 150px; /* Set height for textarea */
   }
+
+  
   
 }
   
 @media screen and (max-width: 600px) {
-
+  .profile-hero,
+  .about-hero,
+  .skills-hero,
+  .experience-hero,
+  .contact-hero {
+    background-image: none;
+  }
+  
   footer {
     height: 40vh;
   }
